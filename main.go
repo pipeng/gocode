@@ -1,11 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"gocode/basic"
+	"gocode/basics"
 )
 
 func main() {
-	fmt.Println("Hello World!")
-	basic.Run()
+	basics.Run()
 }
