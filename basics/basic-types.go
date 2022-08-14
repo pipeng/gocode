@@ -3,6 +3,7 @@ package basics
 import (
 	"errors"
 	"fmt"
+	"math/big"
 )
 
 func TestBasicTypes() {
@@ -23,10 +24,12 @@ func TestBasicTypes() {
 	var a int8 = 1
 	var b int16 = 2
 	var c int32 = 3
+	var cc int64 = 33
 	//无符号整型
 	var d uint8 = 4
 	var e uint16 = 5
 	var f uint32 = 6
+	var ff uint64 = 66
 	//rune是int32的别称，byte是uint8的别称
 	var g rune = 7
 	var h byte = 8
@@ -63,9 +66,23 @@ func TestBasicTypes() {
 	}
 
 	fmt.Printf("%t\n", isRun)
+	fmt.Printf("%d %d", cc, ff)
 	fmt.Printf("%d %d %d %d %d %d %d %d\n", a, b, c, d, e, f, g, h)
 	fmt.Printf("%f %f\n", i, j)
 	fmt.Printf("%v %v\n", k, l)
 	fmt.Printf("%s\n", str1)
 	fmt.Printf("%s\n", str3)
+}
+
+func TestBigInt() {
+	lightSpeed := big.NewInt(299792)
+	secondsPerDay := big.NewInt(86400)
+	distance := new(big.Int)
+	distance.SetString("24000000000000000000", 10)
+	fmt.Println("Andromeda Galaxy is", distance, "km away.")
+	seconds := new(big.Int)
+	seconds.Div(distance, lightSpeed)
+	days := new(big.Int)
+	days.Div(seconds, secondsPerDay)
+	fmt.Println("That is", days, "days of travel at light speed.")
 }

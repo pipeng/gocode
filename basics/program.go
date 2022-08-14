@@ -7,4 +7,7 @@ func Run() {
 	//TestBasicTypes()
 	//TestVariables()
 	//TestConstant()
+	//TestBigInt()
+	//TestTypeConv()
+	TestFunctions()
 }

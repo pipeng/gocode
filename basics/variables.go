@@ -64,3 +64,11 @@ func TestVariables() {
 func foo() (int, string) {
 	return 10, "Q1mi"
 }
+
+func TestTypeConv() {
+	age := 41
+	marsAge := float64(age)
+	marsDays := 687.0
+	earthDays := 365.2425
+	fmt.Println("I'm ", marsAge*earthDays/marsDays, "years old on Mars.")
+}
