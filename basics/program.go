@@ -10,5 +10,6 @@ func Run() {
 	//TestBigInt()
 	//TestTypeConv()
 	//TestFunctions()
-	TestStructs()
+	//TestStructs()
+	TestGenerics()
 }
